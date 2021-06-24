@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        var mobileOSes = ["Android", "like Mac", "iOS"];
+        var finished = false;
+        for (let i = 0; i < mobileOSes.length; i++) {
+            if (navigator.userAgent.indexOf(mobileOSes[i]) != -1) { 
+                console.log("Detected Mobile OS! Redirecting....");
+                window.location.replace("https://dashboard.hyperhacks.org/mobile");
+                finished = true;
+                break;
+            }
+        }
+        if (!finished) {
+            console.log("Desktop OS Detected!");
+            window.location.replace("https://dashboard.hyperhacks.org/desktop");
+        }
+      </script>
+</body>
+</html>
